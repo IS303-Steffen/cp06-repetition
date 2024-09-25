@@ -36,7 +36,18 @@ clear_screen()
 # Google or use AI if you fogot how % works in python.
 
 
+'''
+SHOULD YOU USE BREAK?
+---------------------
 
+Often, coders will suggest not using break, because it isn't
+very clear from the top of the loop, what the purpose of the loop is,
+or how it will eventually terminate.
+
+I personally think it is ok if you comment your code well and if the loop
+is pretty short. Otherwise I might prefer just writing a condition that
+will become false.
+'''
 
 
 

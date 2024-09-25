@@ -1,8 +1,10 @@
-# optional stuff that will clear the window each time you run it.
 import os
 import platform
 
 def clear_screen():
+    """
+    Clears the terminal screen to make it easier to follow along with code.
+    """
     if platform.system() == 'Windows':
         os.system('cls')
     else:
@@ -10,41 +12,47 @@ def clear_screen():
 
 clear_screen()
 
-###########################
-# START READING HERE
-###########################
-
-
-# for loops
+# =========
+# FOR LOOPS
+# =========
 
 '''
-Useful in two main situations:
-    - You have an iterable variable (list, dictionary, range, string, etc. An iterable just means a variable with other variables inside it)
-      and you want to repeat code for however many things are in that iterable variable
+OVERVIEW
+--------
+For loops are useful in two main situations:
 
-    - You want to repeat something x times. Like "do this 5 times". You usually would use a range variable to do that.
+1. With iterable variables (like data structures)
+- You have an iterable variable (list, dictionary, range, string, etc.)
+  and you want to repeat code for each thing  in that iterable variable.
+- An iterable just means a variable that you can "iterate" or step/loop through
+  one by one. In most cases, they are just data structures.
 
+2. Doing something for exactly X number of times
+- You usually would use a range variable to do that.
+- While loops work well for this too, but most people would proably use a for
+  loop
+
+EXAMPLE
+-------  
+iterable_variable = ["example_1", "example_2", "example_3"]
+
+for looping_variable in iterable_variable:
+    print(looping_variable)
+
+TERMS TO KNOW
+-------------
+iterator variable:
+    - The variable that has lots of things inside it to step through
+
+looping variable:
+    - you make this variable name up on the spot.
+      It will represent every individual element in the iterator variable
 '''
-# structure of for loops:
-'''
-    for looping_variable in iterable_variable:
-        code that will repeat
 
-    for:
-        always there
 
-    looping_variable:
-        you make this variable name up on the spot. It will represent every individual element in the iterable_variable
-        sometimes called the iterator variable
-
-    iterable_variable:
-        this is the range, list, etc that you want to loop through
-'''
-
-# Practice:
+# 1. UNDERSTANDING THE LOOPING VARIABLE
 # given a list of names, for each name,
 # print out "This is the character's name: " and then the character's name
-
 example_list = ["Harry", "Hermione", "Ronald", "Luna"]
 
 for name in example_list:
