@@ -41,3 +41,5 @@ for student in range(1, num_students +1):
         score = int(input(f"Enter a test score for test {test}: "))
         print(f"Student {student} scored {score} on test {test}")
     
+
+### note to me: add an example of how break works in nested loops

@@ -1,8 +1,10 @@
-# optional stuff that will clear the window each time you run it.
 import os
 import platform
 
 def clear_screen():
+    """
+    Clears the terminal screen to make it easier to follow along with code.
+    """
     if platform.system() == 'Windows':
         os.system('cls')
     else:
@@ -10,31 +12,32 @@ def clear_screen():
 
 clear_screen()
 
-###########################
-# START READING HERE
-###########################
+# =====================
+# BREAK & CONTINUE
+# =====================
 
-# Break and continue
 '''
-Break and continue are two control statements. They apply to while and for loops the same.
+OVERVIEW
+--------
+Break and continue are two control statements.
+They apply to both while and for loops the same.
+
 They will almost always be used in conjunction with an if statement.
 
-Two types:
+- break:
+    - instantly exit the loop
 
-    - break: instantly exit the loop
-
-    - continue: stop the current iteration of the loop, but then continue on with the next iteration of the loop.
+- continue:
+    - stop the current iteration of the loop,
+      but then go to the top of the loop and
+      continue on with the next iteration of the loop.
 
 '''
 
-
-# break
-# this will make you exit the loop immediately, continue on with anything after the loop
-
-
-# Practice:
-# do the same thing from 7_2_1 (Ask if you want to enter a student name, etc.)
-# but inside the while loop, if they enter "QUIT", immediately exit the loop
+# 1. BREAK OUT OF A LOOP:
+# Below I included the solution to the problem from 01_while_loops.py
+# However, add logic so that if the user enters "QUIT" when it
+# asks for a student name, it immediately gets out of the loop
 
 answer = input("Do you want to enter a student name? ").upper()
 
@@ -48,15 +51,15 @@ while answer == "Y":
     
     print(f"{full_name} has a GPA of {gpa}")
     
-    answer = input("Do you want to enter a student name? ").upper()
+    answer = input("Do you want to enter another student name? ").upper()
 
 print("Thank you")
 
 
-
-# continue
-# Do the same as the above, but if the user enters 0 for the GPA, 
-# then use a continue statement to start the iteration of the loop over.
+# 2. SKIP AN ITERATION OF THE LOOP:
+# Below I included the solution to the problem from 01_while_loops.py
+# However, add logic so that if the user enters a gpa of 0 or below,
+# it prints a message ("invalid GPA") and starts the loop over
 
 answer = input("Do you want to enter a student name? ").upper()
 
@@ -64,12 +67,13 @@ while answer == "Y":
     full_name = input("Enter the student name: ")
     gpa = float(input(f"Enter {full_name}'s GPA: "))
     
-    if gpa == 0:
+    if gpa <= 0:
+        print("Invalid GPA, try again")
         # HERE IS THE CONTINUE
         continue
         
     print(f"{full_name} has a GPA of {gpa}")
-    answer = input("Do you want to enter a student name? ").upper()
+    answer = input("Do you want to enter another student name? ").upper()
 
 print("Thank you")
 

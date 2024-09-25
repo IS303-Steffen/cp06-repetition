@@ -1,8 +1,10 @@
-# optional stuff that will clear the window each time you run it.
 import os
 import platform
 
 def clear_screen():
+    """
+    Clears the terminal screen to make it easier to follow along with code.
+    """
     if platform.system() == 'Windows':
         os.system('cls')
     else:
@@ -10,56 +12,58 @@ def clear_screen():
 
 clear_screen()
 
-###########################
-# START READING HERE
-###########################
+# ====================
+# WHILE LOOPS PRACTICE
+# ====================
 
-# Practice:
-'''
-    prompt the user to enter numbers until they enter the number 0.
-    After entering `0`, the program should display the sum of all numbers entered.
 
-    Try doing this without using break
-'''
-currentSum = 0
-currentNumber = 23456 #arbitrary value
+# 1. PRACTICE: WHILE WITHOUT BREAK 
+# Prompt the user to enter numbers until they enter the number 0.
+# After entering 0, the program should display the sum of all numbers entered.
+# Do this without using break
 
-while currentNumber != 0:
-    currentNumber = int(input("please enter a number: "))
-    currentSum = currentSum + currentNumber
+current_sum = 0
+current_number = None #arbitrary value 
 
-print("current Sum:", currentSum)
+while current_number != 0:
+    current_number = int(input("please enter a number: "))
+    current_sum = current_sum + current_number
+    # you could also use the += shortcut
 
-# Practice:
-'''
-    Do the same thing, but use break
-'''
-currentSum = 0
+print("Total Sum:", current_sum)
+
+# 2. PRACTICE: WHILE WITH BREAK 
+# Do the same as in Practice #1, but use break
+current_sum = 0
 while True:
-    currentNumber = int(input("please enter a number: "))
-    if currentNumber == 0:
+    current_number = int(input("please enter a number: "))
+    if current_number == 0:
         break
-    currentSum = currentSum + currentNumber
+    current_sum = current_sum + current_number
 
-print("current Sum:", currentSum)
+print("Total Sum:", current_sum)
 
-# Practice:
-'''
-    Do the same thing, but only add up a number if it is odd.
-    If it is even, print out "even number, won't add this
-'''
-currentSum = 0
+
+# 3. PRACTICE: WHILE WITH CONTINUE
+# Do the same as in Practice #1 or #2, but only add up a number if
+# it is odd. Use continue to do accomplish this (even though there
+# are other ways you could easily do it)
+
+# Hint: An easy way to check if a number is even or odd is to use modulus %
+# Google or use AI if you fogot how % works in python.
+
+current_sum = 0
 while True:
-    currentNumber = int(input("please enter a number: "))
-    if currentNumber == 0:
+    current_number = int(input("please enter a number: "))
+    if current_number == 0:
         break
     
-    if currentNumber % 2 == 0:
+    if current_number % 2 == 0:
         print("even number, won't add this.")
-    else:
-        currentSum = currentSum + currentNumber
+        continue
+    current_sum = current_sum + current_number
 
-print("current Sum:", currentSum)
+print("Total Sum:", current_sum)
 
 
 

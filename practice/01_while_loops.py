@@ -1,8 +1,10 @@
-# optional stuff that will clear the window each time you run it.
 import os
 import platform
 
 def clear_screen():
+    """
+    Clears the terminal screen to make it easier to follow along with code.
+    """
     if platform.system() == 'Windows':
         os.system('cls')
     else:
@@ -10,36 +12,47 @@ def clear_screen():
 
 clear_screen()
 
-###########################
-# START READING HERE
-###########################
-
-
+# =====
 # LOOPS
+# =====
+
 '''
+OVERVIEW
+--------
 Loops form the basis for tons of basic code. 
 
 Two types:
 
-    - while: you provide a conditional statement. The loop repeats until the statement is false
+while:
+    - you provide a conditional statement. The loop repeats until
+      the statement is false
 
-    - for: you provide an "iteratable" variable (like a range, a list, dictionary, etc.) and it
-           loops for however many elements are in that variable.
-           Note that this is different than most other programming languages. 
+for:
+    - you provide an "iteratable" variable (like a range, a list,
+      dictionary, etc.) and it loops for however many elements
+      are in that variable.
+    - Note that python structures for loops differently than most other
+      programming languages.
 
+We will start off with while loops
 '''
 
-# NEVER ENDING LOOPS
-'''
-You can uncomment the below code for fun.
-Note: you can highlight the text and use ctrl + / (windows) or cmd + / to comment or uncomment things in bulk
 
+'''
+INFINITE LOOPS
+--------------
 while loops will run until the condition you provide turns false.
 If it never becomes false, it will run FOREVER!!!!
 
-if you click in the terminal and press ctrl + c, it'll terminate the code.
+You never want to do this, but run the example below just so you
+can recognize what it looks like for when you accidentally do it.
+
+If you click in the terminal and press ctrl + c, it'll terminate the code.
 you could also click the trash can in the terminal window
 '''
+
+# 1. SEE EXAMPLE OF INFINITE LOOP:
+# Uncomment the code below and run it.
 
 # while True:
 #     print("this")
@@ -47,13 +60,31 @@ you could also click the trash can in the terminal window
 #     print("a")
 #     print("bad")
 #     print("idea")
-   
-# Let's try something more useful:
 
-# Practice:
+'''
+STRUCTURE OF WHILE LOOPS
+------------------------
+You can think of while loops as "if statements" that keep repeating as
+long as the condition listed is true.
+
+The trick is to think of a condition that can eventually become False.
+
+EXAMPLE
+-------
+x = 5
+while x < 10:
+    print(x)
+    x += 1
+
+'''
+
+
+# 2. CONTINUALLY GATHER STUDENT DATA:
 # Ask the user: "Do you want to enter a student name? (enter Y or N): "
 # While the answer is "Y":
-# ask the user to enter a name, then to enter a GPA, and then print out the student's name and GPA
+# ask the user to enter a name, then to enter a GPA,
+# and then print out the student's name and GPA
 # then ask, if they want to enter another student's name (enter Y or N)
 # when they are done entering student info, print "Finished, thank you."
+
 

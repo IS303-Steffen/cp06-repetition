@@ -1,8 +1,10 @@
-# optional stuff that will clear the window each time you run it.
 import os
 import platform
 
 def clear_screen():
+    """
+    Clears the terminal screen to make it easier to follow along with code.
+    """
     if platform.system() == 'Windows':
         os.system('cls')
     else:
@@ -10,32 +12,29 @@ def clear_screen():
 
 clear_screen()
 
-###########################
-# START READING HERE
-###########################
-
-
-# LOOPS
-'''
-Loops form the basis for tons of basic code. 
-
-Two types:
-
-    - while: you provide a conditional statement. The loop repeats until the statement is false
-
-    - for: you provide an "iteratable" variable (like a range, a list, dictionary, etc.) and it
-           loops for however many elements are in that variable.
-           Note that this is different than most other programming languages. 
+# =====================
+# WHILE LOOPS CONTINUED
+# =====================
 
 '''
+OVERVIEW
+--------
+In the last file we stopped the loop when a value was changed.
 
-# Practice:
-# Do the same thing as the last practice, but instead, ask at first:
+Here we can try to run a while loop for a specific number of times.
+'''
+
+
+# 1. CONTINUALLY GATHER STUDENT DATA:
+# Do the same thing as the last practice, (feel free to copy and paste and 
+# then edit it), but at the start, change it to ask:
 # "How many students do you want to enter? "
-# then enter a name and gpa and print it out, but don't repeatedly ask if they want to enter another student
+# then enter a name and gpa and print it out, but don't
+# repeatedly ask if they want to enter another student
 # just automatically end it once the number they initially entered is reached.
 
-# Hint: this means you need to keep track of how many times the loop has run. How could you do that?
+# Hint: this means you need to keep track of how many times the loop has run.
+# How could you do that?
 
 
 
