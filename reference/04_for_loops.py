@@ -58,11 +58,13 @@ example_list = ["Harry", "Hermione", "Ronald", "Luna"]
 for name in example_list:
     print(f"This is the character's name: {name}")
 
+# 2. LOOPING WITH DICTIONARIES
 # Practice:
-# given a dictionary, do:
-    # a for loop that prints out just the keys (default)
-    # a for loop that prints out just the values (use .values(), or put the keys back in the dictionary)
-    # a for loop that prints out the keys and values (use .items())
+# given a dictionary, write:
+# a for loop that prints out just the keys (default)
+# a for loop that prints out just the values (use .values())
+# a for loop that prints out the keys and values (use .items())
+# Hint: for .items(), do you remember how unpacking works?
 
 grade_dict = {"A": 4.0, "A-": 3.7, "B+": 3.4, "B": 3.0}
 
@@ -80,11 +82,15 @@ for key, value in grade_dict.items():
     print(f"This is the key: {key}. This is the value: {value}")
 
 
-# strings are iterables too!
-# not as common to loop through, but you can:
 
-# practice: 
-# print out each individual character in the word "Supercalifragilisticexpialidocious"
+# 3. LOOPING WITH STRINGS
+# print out each individual character
+# in the word "Supercalifragilisticexpialidocious"
+'''
+strings are iterables too!
+not very common to loop through, but you can do it.
+'''
+
 poppins_word = "Supercalifragilisticexpialidocious"
 
 for character in poppins_word:
