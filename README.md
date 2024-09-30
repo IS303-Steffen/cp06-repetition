@@ -1,5 +1,5 @@
 #### Class Practice
-# Data Structures
+# Repetition
 This is how the repository is laid out:
 - The `practice` folder contains instructions without any answers.
 - The `reference` folder contains the same code but with all the answers.
